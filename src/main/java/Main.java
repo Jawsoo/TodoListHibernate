@@ -22,7 +22,7 @@ public class Main {
                     System.out.print("Enter the description of the to-do item: ");
                     String description = scanner.nextLine();
                     todoItemDAO.addTodoItem(new TodoItem(description));
-                    System.out.println(STR."Added: \{description}");
+                    System.out.println("Added: " + description);
                     break;
 
                 case 2:
@@ -31,7 +31,7 @@ public class Main {
                         System.out.println("No items to delete.");
                     } else {
                         for (int i = 0; i < items.size(); i++) {
-                            System.out.println(STR."\{i + 1}. \{items.get(i).getDescription()}");
+                            System.out.println((i + 1) + ". " + items.get(i).getDescription());
                         }
                         System.out.print("Enter the number of the item to delete: ");
                         int index = scanner.nextInt();
@@ -47,7 +47,7 @@ public class Main {
                     } else {
                         System.out.println("To-Do List:");
                         for (TodoItem item : todoItems) {
-                            System.out.println(STR."\{item.getId()}. \{item.getDescription()}");
+                            System.out.println(item.getId() + ". " + item.getDescription());
                         }
                     }
                     break;
